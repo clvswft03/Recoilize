@@ -1,23 +1,52 @@
 {
-  "name": "recoilize",
+  "name": "@todaypp/recoilize",
+  "version": "3.0.0",
+  "description": "A Chrome extension that helps debug Recoil applications by memorizing the state of components with every render.",
+  "author": "Bren Yamaguchi, Saejin Kang, Jonathan Escamilla, Sean Smith, Justin Choo, Anthony Lin, Spenser Schwartz, Steven Nguyen, Henry Taing, Seungho Baek, Taven Shumaker, Aaron Yang, Jesus Vargas, Davide Molino, Janis Hernandez, Jaime Baik, Anthony Magallanes, Edward Shei, Leonard Lew, Joey Ma, Harvey Nguyen, Victor Wang, Sumin Son",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/todaypp/recoilize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/todaypp/recoilize/issues"
+  },
+  "homepage": "https://github.com/todaypp/recoilize#readme",
+  "keywords": [
+    "react",
+    "recoil",
+    "recoilize",
+    "fix",
+    "state",
+    "state-manager",
+    "chrome",
+    "devtools",
+    "visualize",
+    "visualizer",
+    "debug",
+    "debugger"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
   "jest": {
     "setupFiles": [
       "jest-webextension-mock"
     ]
   },
-  "version": "3.0.0",
-  "description": "A Chrome extension that helps debug Recoil applications by memorizing the state of components with every render.",
-  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "clean": "rimraf node_modules src/extension/{build/bundles,*{.crx,.pem}}",
     "dev": "webpack --mode development --watch",
     "install:clean": "rimraf yarn.lock && yarn clean && yarn install",
     "lint": "eslint '**/*.tsx' '**/*.ts' '**/*.js' --ignore-path .gitignore",
+    "posttest": "publish",
     "test": "jest --verbose"
   },
-  "author": "Bren Yamaguchi, Saejin Kang, Jonathan Escamilla, Sean Smith, Justin Choo, Anthony Lin, Spenser Schwartz, Steven Nguyen, Henry Taing, Seungho Baek, Taven Shumaker, Aaron Yang, Jesus Vargas, Davide Molino, Janis Hernandez, Jaime Baik, Anthony Magallanes, Edward Shei, Leonard Lew, Joey Ma, Harvey Nguyen, Victor Wang",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/polyfill": "^7.10.4",
@@ -89,8 +118,5 @@
     "redux-persist": "^6.0.0",
     "rxjs": "^6.6.2",
     "semantic-ui-react": "^1.1.1"
-  },
-  "engines": {
-    "node": "^10.12.0 || >=12.0.0"
   }
 }
