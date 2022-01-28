@@ -1,7 +1,6 @@
-node_modules
-package-lock.json
+**/*.crx
+**/*.pem
+**/node_modules
+.DS_Store
 .vscode
 src/extension/build/bundles
-.DS_Store
-
-package/node_modules/
