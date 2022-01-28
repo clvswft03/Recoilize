@@ -1,6 +1,6 @@
 {
   "name": "@todaypp/recoilize",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A Chrome extension that helps debug Recoil applications by memorizing the state of components with every render.",
   "author": "Bren Yamaguchi, Saejin Kang, Jonathan Escamilla, Sean Smith, Justin Choo, Anthony Lin, Spenser Schwartz, Steven Nguyen, Henry Taing, Seungho Baek, Taven Shumaker, Aaron Yang, Jesus Vargas, Davide Molino, Janis Hernandez, Jaime Baik, Anthony Magallanes, Edward Shei, Leonard Lew, Joey Ma, Harvey Nguyen, Victor Wang, Sumin Son",
   "license": "MIT",
@@ -12,6 +12,9 @@
     "url": "https://github.com/todaypp/recoilize/issues"
   },
   "homepage": "https://github.com/todaypp/recoilize#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "react",
     "recoil",
@@ -27,6 +30,7 @@
     "debugger"
   ],
   "main": "index.js",
+  "types": "types/index.d.ts",
   "engines": {
     "node": "^10.12.0 || >=12.0.0"
   },

@@ -3,4 +3,6 @@
 // Definitions by: Nick Bell <https://github.com/ni3t>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-export type RecoilizeDebugger = (nodes: any, root: HTMLElement | null) => null;
+declare function RecoilizeDebugger(nodes: any, root: HTMLElement | null): null;
+
+export default RecoilizeDebugger;

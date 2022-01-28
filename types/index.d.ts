@@ -1,1 +1,1 @@
-export type {RecoilizeDebugger} from './RecoilizeDebugger';
+export {default} from './RecoilizeDebugger';
