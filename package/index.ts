@@ -4,6 +4,7 @@ import {
   useRecoilSnapshot,
   useGotoRecoilSnapshot,
 } from 'recoil';
+
 import formatFiberNodes from './formatFiberNodes';
 
 // isRestored state disables snapshots from being recorded
@@ -78,9 +79,8 @@ export default function RecoilizeDebugger(props: any) {
     switch (msg.data.action) {
       // Checks to see if content script has started before sending initial snapshot
       case 'contentScriptStarted':
-        const initialFilteredSnapshot = formatAtomSelectorRelationship(
-          filteredSnapshot,
-        );
+        const initialFilteredSnapshot =
+          formatAtomSelectorRelationship(filteredSnapshot);
         const devToolData = createDevToolDataObject(initialFilteredSnapshot);
         sendWindowMessage('moduleInitialized', devToolData);
         break;

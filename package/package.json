@@ -1,25 +1,62 @@
 {
-  "name": "recoilize",
-  "version": "1.0.0",
+  "name": "@todaypp/recoilize",
+  "version": "3.0.3",
   "description": "Recoil Dev Tool",
-  "main": "index.js",
+  "author": "Bren Yamaguchi, Saejin Kang, Jonathan Escamilla, Sean Smith, Justin Choo, Anthony Lin, Spenser Schwartz, Steven Nguyen, Henry Taing, Seungho Baek, Taven Shumaker, Aaron Yang, Jesus Vargas, Davide Molino, Janis Hernandez, Jaime Baik, Anthony Magallanes, Edward Shei, Leonard Lew, Joey Ma, Harvey Nguyen, Victor Wang, Sumin Son",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-source-labs/Recoilize"
+    "url": "git+https://github.com/todaypp/recoilize/tree/master/package"
+  },
+  "bugs": {
+    "url": "https://github.com/todaypp/recoilize/issues"
+  },
+  "homepage": "https://github.com/todaypp/recoilize#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "recoil",
+    "recoilize",
+    "fix",
+    "state",
+    "state-manager",
+    "chrome",
+    "extension",
+    "devtools",
+    "visualize",
+    "visualizer",
+    "debug",
+    "debugger"
+  ],
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
+  "files": [
+    "formatFiberNodes.js",
+    "formatFiberNodes.ts",
+    "index.js",
+    "index.ts",
+    "types"
+  ],
+  "main": "index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "install:clean": "rimraf yarn.lock && yarn clean && yarn install",
+    "posttest": "publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "recoil": "^0.1.2"
   },
-  "scripts": {
-    "clean": "rimraf node_modules",
-    "install:clean": "rimraf yarn.lock && yarn clean && yarn install",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Bren Yamaguchi, Saejin Kang, Jonathan Escamilla, Sean Smith, Justin Choo, Anthony Lin, Spenser Schwartz, Steven Nguyen, Henry Taing, Seungho Baek, Taven Shumaker, Aaron Yang, Jesus Vargas, Davide Molino, Janis Hernandez, Jaime Baik, Anthony Magallanes, Edward Shei, Leonard Lew, Joey Ma, Harvey Nguyen, Victor Wang",
-  "license": "MIT",
   "devDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "recoil": "^0.1.2",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.6"
   }
